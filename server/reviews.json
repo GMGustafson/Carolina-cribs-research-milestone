@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Emily R.",
+    "year": "Junior",
+    "apartment": "The Hub",
+    "rating": 5,
+    "text": "I've lived here for a year now and I absolutely love it! The location is perfect and the views of Columbia are unmatched. The amenities are great and the staff is always so helpful.",
+    "date": "Sep 20, 2026"
+  },
+  {
+    "name": "Tyler B.",
+    "year": "Sophomore",
+    "apartment": "VERVE",
+    "rating": 3,
+    "text": "Overall a great place to live! The proximity to campus is great, although the building is located on Main Street, so the noise can be a little much on weekends.",
+    "date": "Sep 28, 2026"
+  },
+  {
+    "name": "Jordan M.",
+    "year": "Senior",
+    "apartment": "Sawyer on Lincoln",
+    "rating": 4,
+    "text": "I moved in this August and I really like it here! It's an easy walk to campus and the Vista, and the pool is the perfect spot to hang out with friends on warm days.",
+    "date": "Oct 2, 2026"
+  }
+]

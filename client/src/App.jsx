@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 
+const empty = { name: '', year: 'Freshman', apartment: '', rating: 5, text: '' };
+
 export default function App() {
   const [reviews, setReviews] = useState([]);
-  const [inputs, setInputs] = useState({ apartment: '', rating: 5, text: '' });
+  const [inputs, setInputs] = useState(empty);
 
   // Load reviews when the page opens
   useEffect(() => {
@@ -23,7 +25,7 @@ export default function App() {
       body: JSON.stringify(inputs),
     });
     setReviews(await res.json());
-    setInputs({ apartment: '', rating: 5, text: '' });
+    setInputs(empty);
   };
 
   return (
@@ -31,6 +33,16 @@ export default function App() {
       <h1 style={{ color: '#73000a' }}>Carolina Cribs Reviews</h1>
 
       <form onSubmit={addReview}>
+        <input name="name" placeholder="Your name" value={inputs.name}
+          onChange={handleChange} required />
+        <select name="year" value={inputs.year} onChange={handleChange}>
+          <option>Freshman</option>
+          <option>Sophomore</option>
+          <option>Junior</option>
+          <option>Senior</option>
+          <option>Grad Student</option>
+        </select>
+        <br />
         <input name="apartment" placeholder="Apartment" value={inputs.apartment}
           onChange={handleChange} required />
         <select name="rating" value={inputs.rating} onChange={handleChange}>
@@ -45,7 +57,8 @@ export default function App() {
       {reviews.map((r, i) => (
         <div key={i} style={{ border: '1px solid #ccc', borderRadius: 8, padding: 10, marginTop: 10 }}>
           <strong>{r.apartment}</strong> {'★'.repeat(r.rating)}
-          <p>{r.text}</p>
+          <p>"{r.text}"</p>          
+          <small>{r.name} · {r.year} · {r.date}</small>
         </div>
       ))}
     </main>
