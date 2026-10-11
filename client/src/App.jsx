@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-const empty = { name: '', year: 'Freshman', apartment: '', rating: 5, text: '' };
+const empty = { name: '', year: 'Freshman', apartment: '', rating: 0, text: '' };
 
 export default function App() {
   const [reviews, setReviews] = useState([]);
@@ -43,9 +43,19 @@ export default function App() {
           </select>
           <br />
           <input name="apartment" placeholder="Apartment" value={inputs.apartment} onChange={handleChange} required />
-          <select name="rating" value={inputs.rating} onChange={handleChange}>
-            {[5, 4, 3, 2, 1].map(n => <option key={n} value={n}>{n} ★</option>)}
-          </select>
+          
+  {[1, 2, 3, 4, 5].map(n => (
+    <button
+      key={n}
+      type="button"
+      className="star"
+      onClick={() => setInputs({ ...inputs, rating: n })}
+      style={{ color: n <= inputs.rating ? '#d4a017' : '#ccc' }}
+    >
+      ★
+    </button>
+  ))}
+
           <textarea name="text" placeholder="Your review" value={inputs.text} onChange={handleChange} required />
           <button>Add Review</button>
         </form>

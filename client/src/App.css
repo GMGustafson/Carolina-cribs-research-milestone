@@ -1,15 +1,47 @@
-body { margin: 0; background: #fdf8f0; font-family: sans-serif; }
+body { 
+  margin: 0;
+   background: #fdf8f0; 
+   font-family: sans-serif; }
 
-header { background: #73000a; color: white; padding: 16px; font-size: 24px; font-weight: bold; }
+header {
+   background: #73000a; 
+  color: white; 
+  padding: 16px; 
+  font-size: 24px; 
+  font-weight: bold; }
 
-main { max-width: 600px; margin: 20px auto; padding: 0 16px; }
+main { 
+  max-width: 600px; 
+  margin: 20px auto; 
+  padding: 0 16px; }
 
-form, .card { background: white; border: 1px solid #ddd; border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+form, .card { 
+   background: #fff1db; 
+  border: 5px solid #000000; 
+  border-radius: 10px; 
+  padding: 12px; 
+  margin-bottom: 12px; }
 
-input, select, textarea { padding: 6px; margin: 4px 0; }
-textarea { width: 100%; box-sizing: border-box; }
+input, select, textarea { 
+  padding: 6px; 
+  margin: 4px 0; }
+textarea { 
+  width: 100%; 
+  box-sizing: border-box; }
 
-button { background: #d4a017; border: none; border-radius: 20px; padding: 8px 16px; cursor: pointer; }
+button { 
+  background: #d4a017; 
+  border: none; 
+  border-radius: 20px; 
+  padding: 8px 16px; 
+  cursor: pointer; }
 
 .stars { color: #d4a017; }
-.info { color: gray; font-size: 13px; }
+
+.info { color: #73000a; 
+  font-size: 13px; }
+
+  .star { 
+    background: #fff1db;  
+    font-size: 28px; 
+    padding: 0 2px; }
